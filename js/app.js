@@ -38,7 +38,11 @@ app.controller("myController", function ($scope, $http) {
   mqttConnect();
   function mqttConnect() {
     // connect the client
-    client.connect({ onSuccess: onConnect, onFailure: onFailure });
+    client.connect({
+      onSuccess: onConnect,
+      onFailure: onFailure,
+      useSSL: true,
+    });
   }
 
   //### Snippet B1-2 here
