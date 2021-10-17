@@ -30,7 +30,6 @@ app.controller("myController", function ($scope, $http) {
   client = new Paho.MQTT.Client(
     mqtt_broker,
     Number(8000),
-    "/wss",
     "bb_" + parseInt(Math.random() * 100, 10)
   );
   // set callback handlers
